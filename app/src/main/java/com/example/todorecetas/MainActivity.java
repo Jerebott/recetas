@@ -7,17 +7,26 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+//autores Jan Lazo,Daniel Vespa
 public class MainActivity extends AppCompatActivity {
+
     Button boton;
     EditText usernameEdit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //vinvular con xml
         boton = findViewById(R.id.button1);
         usernameEdit = findViewById(R.id.usernameEdit);
+        //metodo enviar datos
+        enviarDatos();
 
+
+    }
+    public void enviarDatos(){
         //listener para el boton, despues de presionarlo las siguientes operaciones ocurriran
         boton.setOnClickListener(v ->{
             //obtener valor del input y transformarlo a string
@@ -28,7 +37,5 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("mensaje",str);
             //iniciar el intent
             startActivity(intent);
-        });
-
-    }
+        });};
 }
