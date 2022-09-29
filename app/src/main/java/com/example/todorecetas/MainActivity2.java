@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class MainActivity2 extends AppCompatActivity {
-
+ //rodigro
     TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
